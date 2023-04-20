@@ -1,0 +1,104 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: logo
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: menu
+        field:
+          antlers: true
+          default: |-
+            <ul class="footer-mnu footer-mnu-line">
+                                            <li><a href="/" class="hover-link" data-title="Home"><span>Home</span></a></li>
+                                            <li><a href="/about" class="hover-link" data-title="About us"><span>About us</span></a></li>
+                                            <li><a href="/services" class="hover-link" data-title="Services"><span>Services</span></a></li>
+                                            <li><a href="/news" class="hover-link" data-title="News"><span>News</span></a></li>
+                                            <li><a href="/contact-us" class="hover-link" data-title="Contacts"><span>Contacts</span></a></li>
+                                        </ul>
+          display: Menu
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  template:
+    display: Template
+    fields:
+      -
+        handle: template
+        field:
+          antlers: true
+          default: |-
+            <!-- Begin footer -->
+            <footer class="footer footer-minimal">
+                <div class="footer-main">
+                    <div class="container">
+                        <div class="row items align-items-center">
+                            <div class="col-lg-3 col-md-4 col-12 item">
+                                <div class="widget-brand-info">
+                                    <div class="widget-brand-info-main">
+                                        <a href="/" class="logo" title="{{title}}">
+                                            <img data-src="{{site_footer:logo}}" class="lazy" width="133" height="36" src="{{site_footer:logo}}" alt="{{title}}" data-loaded="true" style="opacity: 1;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md item">
+                                <div class="footer-item">
+                                    <nav class="footer-nav">
+                                        {{site_footer:menu}}
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row justify-content-between items">
+                            <div class="col-md-auto col-12 item">
+                                <nav class="footer-links">
+                                    <ul>
+                                        <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-md-auto col-12 item">
+                                <div class="copyright">© 2023 Revolve314 Digital. All rights reserved.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- End footer -->
+
+
+
+
+            <script src="/pathsoft/assets/libs/jquery/jquery.min.js"></script>
+            <script src="/pathsoft/assets/libs/lozad/lozad.min.js"></script>
+            <script src="/pathsoft/assets/libs/device/device.js"></script>
+            <script src="/pathsoft/assets/libs/spincrement/jquery.spincrement.min.js"></script>
+            <script src="/pathsoft/assets/libs/pristine/pristine.min.js"></script>
+            <script src="/pathsoft/assets/js/custom.js"></script>
+            <script src="/pathsoft/assets/js/forms.js"></script>
+          display: Template
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible

@@ -1,0 +1,89 @@
+title: Page
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          localizable: true
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: breadcrumb
+        field:
+          antlers: false
+          default: |-
+            <nav class="bread-crumbs">
+            				<div class="container">
+            					<div class="row">
+            						<div class="col-12">
+            							<ul class="bread-crumbs-list">
+            								<li>
+            									<a href="/">Home</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>
+            									<a href="/services">Services</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>Corporate Solutions</li>
+            							</ul>
+            						</div>
+            					</div>
+            				</div>
+            			</nav>
+          display: Breadcrumb
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  block_types:
+    display: 'Block Types'
+    fields:
+      -
+        import: block_types

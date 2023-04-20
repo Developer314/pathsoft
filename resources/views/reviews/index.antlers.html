@@ -1,0 +1,38 @@
+
+{{breadcrumb}}
+
+<section class="section">
+				<div class="container">
+					<div class="row">
+						<header class="col-12">
+							<div class="section-heading heading-center">
+								<div class="section-subheading">Reviews from our clients</div>
+								<h2>What People Say</h2>
+							</div> 
+						</header>
+						{{collection:reviews}}
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<div class="reviews-item item-style">
+								<div class="reviews-item-header">
+									<div class="reviews-item-img">
+										<img data-src="{{image}}" class="img-cover lazy" src="{{image}}" alt="{{title}}" data-loaded="true">
+									</div>
+									<div class="reviews-item-info">
+										<h4 class="reviews-item-name item-heading">{{title}}</h4>
+										<div class="reviews-item-position">{{sub_title}}</div>
+									</div>
+								</div>
+								<div class="reviews-item-text">
+									{{content}}
+								</div>
+							</div>
+						</div>
+						{{/collection:reviews}}
+						
+					</div>
+				</div>
+			</section>
+
+{{block_types}}
+{{template}}
+{{/block_types}}

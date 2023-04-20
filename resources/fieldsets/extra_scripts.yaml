@@ -1,0 +1,24 @@
+title: 'Extra Scripts'
+fields:
+  -
+    handle: page_header_extra
+    field:
+      antlers: true
+      default: '<!--Extra Page Header Scripts-->'
+      display: 'Page Header Extra'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: page_footer_extra
+    field:
+      antlers: true
+      default: '<!--Page Footer Extra-->'
+      display: 'Page Footer Extra'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible

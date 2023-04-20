@@ -1,0 +1,8 @@
+export_paths:
+  - content
+  - resources/blueprints
+  - resources/forms
+  - resources/views
+  - resources/fieldsets
+  - public/pathsoft
+  - public/assets

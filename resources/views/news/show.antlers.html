@@ -1,0 +1,34 @@
+
+{{breadcrumb}}
+
+<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="news-post">
+								<header class="news-post-header">
+									<h1 class="news-post-title">{{title}}</h1>
+									<div class="news-post-meta">
+										<div class="news-post-meta-item">
+											<i class="material-icons md-22">access_time</i>
+											<span>{{news_date}}</span>
+										</div>
+										
+									</div>
+									<div class="news-post-img item-bordered item-border-radius">
+										<img data-src="{{image}}" class="img-responsive lazy" src="{{image}}" alt="" data-loaded="true">
+									</div>
+								</header>
+								<article class="news-post-article content">
+									{{content}}
+								</article>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+{{block_types}}
+{{template}}
+{{/block_types}}

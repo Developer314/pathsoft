@@ -1,0 +1,101 @@
+title: 'Site Header'
+data:
+  logo: logo.svg
+  navigation: |-
+    <ul class="main-mnu-list">
+            <li>
+                <a href="/" data-title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about-us" data-title="About us">
+                    <span>About us</span>
+                </a>
+            </li>
+            <li>
+                <a href="/services" data-title="Services">
+                    <span>Services</span>
+                </a>
+            </li>
+
+     <li>
+                <a href="/reviews" data-title="Reviews">
+                    <span>Reviews</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/news" data-title="News">
+                    <span>News</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contact-us" data-title="Contacts">
+                    <span>Contacts</span>
+                </a>
+            </li>
+        </ul>
+  mobile_nav: |-
+    <ul class="mmm-list">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About us</a>
+                </li>
+                <li>
+                    <a href="/services">Services</a>
+                </li>
+     <li>
+                <a href="/reviews" data-title="Reviews">
+                    <span>Reviews</span>
+                </a>
+            </li>
+               
+                <li>
+                    <a href="/news">News</a>
+                </li>
+                <li>
+                    <a href="/contact-us">Contacts</a>
+                </li>
+            </ul>
+  template: |-
+    <!-- Begin mobile main menu --> 
+    <nav class="mmm">
+        <div class="mmm-content">
+            {{site_header:mobile_nav}} 
+        </div>
+    </nav><!-- End mobile main menu -->
+
+    <header class="header header-minimal"> 
+        <nav class="header-fixed">
+            <div class="container">
+                <div class="row flex-nowrap align-items-center justify-content-between">
+                    <div class="col-auto header-fixed-col logo-wrapper">
+                        <a href="/" class="logo" title="PathSoft">
+                            <img src="{{site_header:logo}}" width="115" height="36" alt="{{title}}">
+                        </a>
+                    </div>
+                    <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
+                        <div class="row flex-nowrap align-items-center justify-content-end">
+                            <div class="col header-fixed-col d-none d-xl-block col-static">
+                                <!-- Begin main menu -->
+    <nav class="main-mnu">
+        {{site_header:navigation}}
+    </nav><!-- End main menu -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto d-block d-xl-none header-fixed-col">
+                        <div class="main-mnu-btn">
+                            <span class="bar bar-1"></span>
+                            <span class="bar bar-2"></span>
+                            <span class="bar bar-3"></span>
+                            <span class="bar bar-4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>

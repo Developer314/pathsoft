@@ -1,0 +1,63 @@
+title: Head
+data:
+  meta_title: 'Your Page/Site Name'
+  meta_description: 'Your Page Meta Description'
+  meta_keywords: 'Tag 1, Tag 2'
+  og_title: 'OG Title'
+  og_description: 'OG Description'
+  fav_icon: logo-ico.png
+  page_header_extra: '<!--Extra Page Header Scripts-->'
+  page_footer_extra: '<!--Page Footer Extra-->'
+  template: |-
+    {{if meta_title}}
+            <title>{{ meta_title }}</title> 
+            {{else}}
+            <title>{{ title ?? site:name }}</title>
+            {{/if}}
+
+    {{if head:fav_icon}}
+    <link rel="icon" href="{{head:fav_icon}}" type="image/x-icon"> 
+    {{/if}}
+            
+            {{if meta_keywords}}
+            <meta name = "keywords" content = "{{meta_keywords}}" />
+            {{/if}}
+            
+            {{if meta_description}}
+            <meta name = "description" content = "Learning about Meta Tags." />
+            {{/if }}
+            
+            {{if other_meta_tags}}
+            
+            {{other_meta_tags}}
+            
+            <meta {{meta_tag_name}} = "{{meta_tag_value}}" {{meta_tag_value_name}} = "{{meta_tag_value_name_value}}" />
+            
+            
+            {{/other_meta_tags}}
+            
+            {{/if}}
+
+        {{if og_title}}
+        <meta property="og:title" content="{{og_title}}" />
+        {{/if}}
+        {{if og_description}}
+        <meta property="og:description" content="{{og_description}}" />
+        {{/if}}
+        {{if og_image}}
+        <meta property="og:image" content="{{site:permalink}}{{og_image}}" />
+        {{/if}}
+
+
+
+    <link rel="stylesheet" href="/pathsoft/assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/pathsoft/assets/css/style.css">
+        <link rel="preload" href="/pathsoft/assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/pathsoft/assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/pathsoft/assets/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/pathsoft/assets/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="/pathsoft/assets/fonts/material-icons/material-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/pathsoft/assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin>
+
+    {{extra_scripts:page_header_extra}}

@@ -1,0 +1,9 @@
+{
+    "name": "developer314/pathsoft",
+    "extra": {
+        "statamic": {
+            "name": "Pathsoft",
+            "description": "Pathsoft starter kit"
+        }
+    }
+}

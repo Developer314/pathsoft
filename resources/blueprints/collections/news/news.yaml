@@ -1,0 +1,112 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+      -
+        handle: short_description
+        field:
+          antlers: false
+          default: 'Digital transformation requires cloud appropriate adoption'
+          display: 'Short Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: news_date
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'News Date'
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: thumbnail
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Thumbnail
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: breadcrumb
+        field:
+          antlers: true
+          default: |-
+            <nav class="bread-crumbs">
+            				<div class="container">
+            					<div class="row">
+            						<div class="col-12">
+            							<ul class="bread-crumbs-list">
+            								<li>
+            									<a href="/">Home</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>
+            									<a href="/services">Services</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>News</li>
+            							</ul>
+            						</div>
+            					</div>
+            				</div>
+            			</nav>
+          display: Breadcrumb
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+title: News

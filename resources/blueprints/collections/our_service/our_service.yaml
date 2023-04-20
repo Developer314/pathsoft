@@ -1,0 +1,111 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+      -
+        handle: short_description
+        field:
+          antlers: false
+          default: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
+          display: 'Short Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: icon
+        field:
+          options:
+            cloud_done: Cloud
+            corporate_fare: Fare
+            support_agent: Agent
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: cloud_done
+          display: Icon
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: breadcrumb
+        field:
+          antlers: true
+          default: |-
+            <nav class="bread-crumbs">
+            				<div class="container">
+            					<div class="row">
+            						<div class="col-12">
+            							<ul class="bread-crumbs-list">
+            								<li>
+            									<a href="/">Home</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>
+            									<a href="/services">Services</a>
+            									<i class="material-icons md-18">chevron_right</i>
+            								</li>
+            								<li>Corporate Solutions</li>
+            							</ul>
+            						</div>
+            					</div>
+            				</div>
+            			</nav>
+          display: Breadcrumb
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  block_types:
+    display: 'Block Types'
+    fields:
+      -
+        import: block_types
+title: 'Our Service'

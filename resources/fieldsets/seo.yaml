@@ -1,0 +1,134 @@
+title: SEO
+fields:
+  -
+    handle: meta_title
+    field:
+      input_type: text
+      antlers: false
+      default: 'Your Page/Site Name'
+      display: 'Meta Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: meta_description
+    field:
+      antlers: true
+      default: 'Your Page Meta Description'
+      display: 'Meta Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: meta_keywords
+    field:
+      antlers: true
+      default: 'Tag 1, Tag 2'
+      display: 'Meta Keywords'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: og_title
+    field:
+      input_type: text
+      antlers: false
+      default: 'OG Title'
+      display: 'OG Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: og_description
+    field:
+      antlers: false
+      default: 'OG Description'
+      display: 'OG Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: og_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'OG Image'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      max_files: 1
+  -
+    handle: other_meta_tags
+    field:
+      fields:
+        -
+          handle: meta_tag_name
+          field:
+            input_type: text
+            antlers: false
+            default: http-equiv
+            display: 'Meta Tag Name'
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+        -
+          handle: meta_tag_value
+          field:
+            input_type: text
+            antlers: false
+            default: Author
+            display: 'Meta Tag Value'
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+        -
+          handle: meta_tag_value_name
+          field:
+            input_type: text
+            antlers: true
+            default: content
+            display: 'Meta tag Value Name'
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+        -
+          handle: meta_tag_value_name_value
+          field:
+            antlers: true
+            default: 'John Doe'
+            display: 'Meta tag Value Name Value'
+            type: textarea
+            icon: textarea
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+      mode: stacked
+      reorderable: true
+      display: 'Other Meta Tags'
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      add_row: 'Add Additional Meta Tags'
